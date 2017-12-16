@@ -1,31 +1,17 @@
-#pragma once;
-#include "Debug.h"
-#include "Engine.h"
-#include "Gui_Controller.h"
-
-using namespace std;
-using namespace System;
+#include "IntroState.h"
+#include <TacticsEngine\Engine.h>
 
 int main()
 {
-	
+	System::Engine *engine = new System::Engine("assets/master.dat");
+	engine->RegisterState<IntroState>(0);
 
-
-
-
-	Debug::Initiate("ErrorEnum.dat");
-	Engine * GameEngine = new Engine("master.dat");
-
-	GameEngine->Initiate();
-
-	while (!GameEngine->end)
+	engine->Initiate();
+	while (!engine->end)
 	{
-		GameEngine->Update();
-		GameEngine->HandleMessages();
+		engine->Update();
+		
 	}
+	engine->Shutdown();
 
-	GameEngine->Shutdown();
-	
-	delete GameEngine;
-	GameEngine = nullptr;
 }

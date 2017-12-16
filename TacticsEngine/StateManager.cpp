@@ -1,5 +1,4 @@
 #include "StateManager.h"
-#include "IntroState.h"
 #include <queue>
 namespace System
 {
@@ -7,14 +6,14 @@ namespace System
 	StateManager::StateManager(SharedContext * l_shared)
 		: context(l_shared)
 	{
-		RegisterState<IntroState>(StateType::states::Intro);
+		
 	}
 
 	StateManager::~StateManager()
 	{
 	}
 
-	void StateManager::LoadState(StateType::states State)
+	void StateManager::LoadState(int State)
 	{
 		BaseState * state = RegisteredStates[State]();
 		state->Initiate();
@@ -29,7 +28,7 @@ namespace System
 		delete state;
 	}
 
-	void StateManager::ForceState(StateType::states State)
+	void StateManager::ForceState(int State)
 	{
 		while (!stateStack.Empty())
 		{

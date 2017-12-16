@@ -1,7 +1,7 @@
 #pragma once
-#include <SFML\Graphics.hpp>
-#include "BaseState.h"
-#include "TextLine.h"
+#include <TacticsEngine/BaseState.h>
+#include <TacticsEngine\FontManager.h>
+#include <TacticsEngine\Gui_Controller.h>
 class IntroState :
 	public BaseState
 {
@@ -32,5 +32,6 @@ public:
 private:
 	Render::TextLine * write;
 	sf::Font * font;
+
 };
 

@@ -22,6 +22,9 @@ namespace System
 		SystemWindow * GetWindow();
 		Render::FontManager *GetFontManager();
 		System::MessageHandler * GetMessenger() { return MessageManager; }
+
+		//set to true to exit
+		bool end = false;
 	private:
 		void LoadMasterFile(string file);
 		map<string, string> FileSources;	//Tells the engine where to load files
@@ -30,6 +33,8 @@ namespace System
 		//systems
 		Render::FontManager * fontManager;
 		MessageHandler * MessageManager;
+
+		
 
 	};
 }

@@ -13,15 +13,15 @@
     <Element type="Button" id="Exit">
       <size width="400" height="100"></size>
       <position x="200" y="425"></position>
-      <color red ="0" green="0" blue="255" alpha="255"></color>
+      <color red ="255" green="0" blue="0" alpha="255"></color>
       <label>
         <color red ="255" green="255" blue="255" alpha="255"></color>
         <text>Exit</text>
       </label>
-      <Event type ="OnClick">
-        <Message id="2">          
-        </Message>
-      </Event>
+      <event type ="OnClick">
+        <message id="2">          
+        </message>
+      </event>
     </Element>
   </mainmenu>
 </gui>

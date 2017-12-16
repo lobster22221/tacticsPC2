@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\State">
+      <UniqueIdentifier>{3f823b51-355d-47f2-a6d4-5e404f007e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\debug">
+      <UniqueIdentifier>{2e50052e-c2db-4e88-b967-4c8467f3b642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System">
+      <UniqueIdentifier>{76a79aa0-a845-4278-8abd-d1338207c785}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\Render Systems">
+      <UniqueIdentifier>{9890b2aa-fbd0-4cbb-b84b-a42b27ffa2d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{b301a5c3-6e50-4b16-b2e3-c93911d09f4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\event">
+      <UniqueIdentifier>{707354dc-046f-4f73-a4ee-d4bde35997ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{c6b21113-33d0-4ad6-8aa0-fb8c9badfa3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ThirdParty">
+      <UniqueIdentifier>{72975266-d88d-4d60-8df8-c24f0fb206d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InputCommands.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseState.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Source Files\System\event</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Source Files\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugOverlay.h">
+      <Filter>Source Files\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>Source Files\System\Render Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Gui_Controller.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIStyle.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Element.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Label.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedContext.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageHandler.h">
+      <Filter>Source Files\System\event</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemWindow.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="TextLine.h">
+      <Filter>Source Files\System\Render Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="TraversableStack.h">
+      <Filter>Source Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdParty\TinyXML\tinyxml2.h">
+      <Filter>Source Files\ThirdParty</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseState.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files\System\event</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>Source Files\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugOverlay.cpp">
+      <Filter>Source Files\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>Source Files\System\Render Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Gui_Controller.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Element.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Label.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIStyle.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedContext.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageHandler.cpp">
+      <Filter>Source Files\System\event</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemWindow.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="TextLine.cpp">
+      <Filter>Source Files\System\Render Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="TraversableStack.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdParty\TinyXML\tinyxml2.cpp">
+      <Filter>Source Files\ThirdParty</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -15,7 +15,7 @@ namespace System
 
 	public:
 		virtual void HandleMessages() = 0;
-		virtual void Subscribe(GameEvent eventType) = 0;
+		
 
 		void Notify(EventMessage message)
 		{

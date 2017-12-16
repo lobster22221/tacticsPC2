@@ -26,9 +26,17 @@ namespace System
 		void Update();
 		void Draw();
 		void Shutdown();
-
 		void HandleMessages();
-		void Subscribe(GameEvent eventType);
+
+		
+		void LoadState(int state);
+
+		template <class T>
+		void Engine::RegisterState(int index)
+		{
+			StateController->RegisterState<T>(index);
+		}
+		
 
 		StateManager * GetStateManager();
 		SharedContext * GetContext();
@@ -40,16 +48,18 @@ namespace System
 		DebugOverlay * DebugInfo;
 		
 		
+
+		//Clock rate
 		sf::Clock TickClock;
 		sf::Clock AnimationClock;
-		float last_Tick = 0;
-		
+		float last_Tick = 0;		
 		float last_Draw = 0;
 		int TickRate = 30;		//How many times a second input is checked
 		//How many times a second animation is updated
 		int AnimationRate = 20;		//How many times a second things are drawn to the screen;
 		float TickAccumulator = 0;
 		float FrameAccumulator = 0;
+		
 	};
 }
 

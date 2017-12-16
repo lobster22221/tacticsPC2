@@ -1,6 +1,5 @@
 #pragma once
 #include "BaseState.h"
-#include "IntroState.h"
 #include "TraversableStack.h"
 #include <map>
 #include <unordered_map>
@@ -9,26 +8,12 @@
 using	namespace std;
 namespace System
 {
-	namespace StateType
-	{
-		enum states
-		{
-			None,
-			Intro,
-			MainMenu,
-			LoadMenu,
-			Cutscene,
-			Battle,
-			Pause,
-			WorldMap,
-			GameOver
-		};
-	}
-	using StateContainer = std::vector<std::pair<StateType::states, BaseState*>>;
+	
+	using StateContainer = std::vector<std::pair<int, BaseState*>>;
 	// Type container.
-	using TypeContainer = std::vector<StateType::states>;
+	using TypeContainer = std::vector<int>;
 	// State factory.
-	using StateFactory = std::unordered_map<StateType::states, std::function<BaseState*(void)>>;
+	using StateFactory = std::unordered_map<int, std::function<BaseState*(void)>>;
 
 	class StateManager
 	{
@@ -37,14 +22,14 @@ namespace System
 		~StateManager();
 
 		//Adds a state on the top of the stack
-		void LoadState(StateType::states State);
+		void LoadState(int State);
 		//Unload Top State
 		void UnloadState();
 		//Erase the stack and load a new state
-		void ForceState(StateType::states State);
+		void ForceState(int State);
 		//Add a new state to the list of states availible
 		template<class T>
-		void RegisterState(StateType::states state)
+		void RegisterState(int state)
 		{
 			RegisteredStates[state] = [this]() -> BaseState*
 			{

@@ -2,7 +2,8 @@
 #include <iostream>
 #include <SFML/System.hpp>
 #include "TextLine.h"
-
+#include "Debug.h"
+#include "Command.h"
 using namespace std;
 GUI::GUI_Element_Factory::GUI_Element_Factory(StyleFactory * styleTemplate)
 {
@@ -44,6 +45,7 @@ void GUI::GUI_Element_Factory::SetToTemplate(StyleFactory * newTemplate)
 GUI::Gui_Controller::Gui_Controller(System::SharedContext * context )
 {
 	this->context = context;
+	context->GetMessenger()->Subscribe(GameEvent::EVENT_CLICK_LEFT,this);
 }
 
 GUI::Gui_Controller::~Gui_Controller()
@@ -60,11 +62,39 @@ void GUI::Gui_Controller::Draw(sf::RenderWindow * win)
 
 void GUI::Gui_Controller::HandleMessages()
 {
+	while (messages.empty() == false)
+	{
+		EventMessage message = messages.front();
+		messages.pop();
+		switch (message.EventType)
+		{
+			case GameEvent::EVENT_CLICK_LEFT:
+			{
+				LeftClickEvent * event = (LeftClickEvent *)message.EventData;
+				int mX = event->mouseX;
+				int mY = event->mouseY;
+				for each(pair<string, GUI_Element*> el in this->ElementMap)
+				{
+					if (el.second->WasClicked(mX, mY))
+					{
+						cout << "clicked " << el.second->guiID << endl;
+						EventMessage Message;
+						Message.EventType = GameEvent::WINDOW_CLOSED;
+						context->GetMessenger()->Dispatch(Message);
+					}
+				}
+
+				break;
+			}
+		}
+	}
 }
 
 void GUI::Gui_Controller::Subscribe(GameEvent eventType)
 {
 }
+
+//loader functions
 Render::TextLine * GUI::Gui_Controller::LoadLabel(tinyxml2::XMLElement * n)
 {
 	
@@ -181,6 +211,16 @@ void GUI::Gui_Controller::LoadElement(tinyxml2::XMLElement * n)
 		if (s == "label")
 		{
 			element->label = LoadLabel(children);
+		}
+		if (s == "event")
+		{
+			//What kind of action triggers this event
+			const char * action = children->Attribute("type");
+			s = t;
+			//What message to dispatch
+			const char * messageType = children->FirstChildElement()->Attribute("id");
+			element->OnClickMessage.EventType = (GameEvent)stoi(messageType);
+			element->Clickable = true;
 		}
 		
 		children = children->NextSiblingElement();

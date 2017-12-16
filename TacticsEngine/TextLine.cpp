@@ -32,6 +32,13 @@ void Render::TextLine::SetColor(sf::Color color)
 	this->line.setFillColor(color);
 }
 
+void Render::TextLine::setPosition(int x, int y, int w, int h)
+{
+	line.setOrigin(line.getGlobalBounds().width / 2, line.getGlobalBounds().height / 2);
+
+	SetPosition(x + (w / 2), y + (h / 2) -10);
+}
+
 void Render::TextLine::Draw(sf::RenderWindow* window)
 {
 	string s = line.getString();

@@ -8,8 +8,8 @@
     </Element>
     <Element type="Button" id="Attack">
       <size width="100" height="100"></size>
-      <position x="125" y="700"></position>
-      <color red ="0" green="255" blue="0" alpha="255"></color>
+      <position x="0" y="700"></position>
+      <color red ="255" green="0" blue="0" alpha="255"></color>
     </Element>
   </ActionMenu>
 

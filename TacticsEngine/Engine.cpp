@@ -1,5 +1,4 @@
 #include "Engine.h"
-#include "IntroState.h"
 #include "Command.h"
 
 namespace System
@@ -13,7 +12,6 @@ namespace System
 		context = new SharedContext();
 		context->Initiate(ReferenceFiles);
 		StateController = new StateManager(context);
-		StateController->LoadState(StateType::Intro);
 		DebugInfo = new DebugOverlay(this->context->GetWindow()->GetWidth(), 
 			this->context->GetWindow()->GetHeight(), this->context->GetWindow()->GetWindow());
 		
@@ -28,7 +26,8 @@ namespace System
 	{
 		auto messenger = context->GetMessenger();
 		messenger->Subscribe((int)GameEvent::EVENT_DEBUG, this);
-		messenger->Subscribe((int)GameEvent::EVENT_CLICK_LEFT, this);
+		messenger->Subscribe((int)GameEvent::WINDOW_CLOSED, this);
+		LoadState(0);
 	}
 
 	void Engine::Update()
@@ -53,10 +52,10 @@ namespace System
 			FrameAccumulator -= rate;
 		}
 		
-	
-		
 
-		
+		HandleMessages();
+		this->end = context->end;
+
 	}
 
 	void Engine::Draw()
@@ -81,25 +80,29 @@ namespace System
 			messages.pop();
 			switch (message.EventType)
 			{
-			case GameEvent::EVENT_DEBUG:
-				Debug::Log("Debug\n");
-				DebugInfo->visible = !DebugInfo->visible;
+				case GameEvent::EVENT_DEBUG:
+				{
+					Debug::Log("Debug Toggled\n");
+					DebugInfo->visible = !DebugInfo->visible;
 
-				break;	
-			case GameEvent::EVENT_CLICK_LEFT:
-				LeftClickEvent * event = (LeftClickEvent *)message.EventData;
-				int mx = event->mouseX;
-				int my = event->mouseY;				
-				Debug::Log("Left Click <X: " + std::to_string(mx) + ", Y: " + std::to_string(my) + ">\n");
-				break;
-			
+					break;
+				}
+				case GameEvent::WINDOW_CLOSED:
+				{
+					exit(0);
+					break;
+				}
 			}
 		}
 	}
 
-	void Engine::Subscribe(GameEvent eventType)
+	void Engine::LoadState(int state)
 	{
+		StateController->LoadState(state);
 	}
+
+	
+
 
 	StateManager * Engine::GetStateManager()
 	{

@@ -2,6 +2,7 @@
 #include "GUIStyle.h"
 #include <string>
 #include "TextLine.h"
+#include "Command.h"
 using namespace std;
 namespace GUI
 {
@@ -32,9 +33,30 @@ namespace GUI
 		GUIStyle Hover_Style;
 		GUIStyle Click_Style;
 
+		bool WasClicked(int x, int y)
+		{
+			if (Clickable)
+			{				
+				return this->Default_Style.panel.getGlobalBounds().contains(sf::Vector2f(x, y));
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		EventMessage Click(int x, int y)
+		{
+			return OnClickMessage;
+
+		}
 		bool Active = true;
 		string guiID;
 		Render::TextLine * label;
+
+		bool Clickable;
+		EventMessage OnClickMessage;
+		
 	};
 
 }

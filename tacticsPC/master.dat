@@ -1,6 +1,0 @@
-WindowDefinition Window.dat
-TextureSource Textures.dat
-SpriteSource Sprites.dat
-AudioSource Audio.dat
-InputSource Input.dat
-FontSource	Font.dat

@@ -17,6 +17,8 @@ namespace Render
 		void SetFont(sf::Font* font);
 		void SetText(string text);
 		void SetColor(sf::Color color);
+
+		void setPosition(int x, int y, int w, int h);
 		void Draw(sf::RenderWindow * window);
 
 		
