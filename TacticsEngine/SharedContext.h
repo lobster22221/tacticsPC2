@@ -4,6 +4,7 @@
 #include "SystemWindow.h"
 #include "FontManager.h"
 #include "MessageHandler.h"
+#include "TextureManager.h"
 using namespace std;
 namespace System
 {
@@ -34,6 +35,8 @@ namespace System
 		Render::FontManager * fontManager;
 		MessageHandler * MessageManager;
 
+		//ResourceLoaders
+		TextureManager * TextureManager;
 		
 
 	};

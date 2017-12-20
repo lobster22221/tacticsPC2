@@ -5,14 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Source Files\State">
       <UniqueIdentifier>{3f823b51-355d-47f2-a6d4-5e404f007e34}</UniqueIdentifier>
     </Filter>
@@ -36,6 +28,18 @@
     </Filter>
     <Filter Include="Source Files\ThirdParty">
       <UniqueIdentifier>{72975266-d88d-4d60-8df8-c24f0fb206d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\ECS">
+      <UniqueIdentifier>{b5ee4f06-e724-4d7c-b014-26c162400aa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\ECS\Components">
+      <UniqueIdentifier>{d2948361-770f-49b9-bc36-5482d3b4a5e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\ECS\System">
+      <UniqueIdentifier>{754bb8c1-1cfb-4ee7-8ddc-e056ba2ea352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resources">
+      <UniqueIdentifier>{4c9e085e-e684-4f03-aadf-1c16e1468ac0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +97,33 @@
     <ClInclude Include="thirdParty\TinyXML\tinyxml2.h">
       <Filter>Source Files\ThirdParty</Filter>
     </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Source Files\System\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Component_Base.h">
+      <Filter>Source Files\System\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Component_Transform.h">
+      <Filter>Source Files\System\ECS\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="System_Base.h">
+      <Filter>Source Files\System\ECS\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System_Transform.h">
+      <Filter>Source Files\System\ECS\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Component_Animator.h">
+      <Filter>Source Files\System\ECS\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteManager.h">
+      <Filter>Source Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Source Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteSheet.h">
+      <Filter>Source Files\Resources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseState.cpp">
@@ -145,6 +176,33 @@
     </ClCompile>
     <ClCompile Include="thirdParty\TinyXML\tinyxml2.cpp">
       <Filter>Source Files\ThirdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Source Files\System\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Component_Base.cpp">
+      <Filter>Source Files\System\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Component_Transform.cpp">
+      <Filter>Source Files\System\ECS\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="System_Base.cpp">
+      <Filter>Source Files\System\ECS\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System_Transform.cpp">
+      <Filter>Source Files\System\ECS\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Component_Animator.cpp">
+      <Filter>Source Files\System\ECS\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteManager.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteSheet.cpp">
+      <Filter>Source Files\Resources</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

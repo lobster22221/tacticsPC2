@@ -132,9 +132,13 @@
   <ItemGroup>
     <ClInclude Include="BaseState.h" />
     <ClInclude Include="Command.h" />
+    <ClInclude Include="Component_Animator.h" />
+    <ClInclude Include="Component_Base.h" />
+    <ClInclude Include="Component_Transform.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="DebugOverlay.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="EntityManager.h" />
     <ClInclude Include="FontManager.h" />
     <ClInclude Include="GUIStyle.h" />
     <ClInclude Include="Gui_Controller.h" />
@@ -143,18 +147,27 @@
     <ClInclude Include="InputCommands.h" />
     <ClInclude Include="MessageHandler.h" />
     <ClInclude Include="SharedContext.h" />
+    <ClInclude Include="SpriteManager.h" />
+    <ClInclude Include="SpriteSheet.h" />
     <ClInclude Include="StateManager.h" />
     <ClInclude Include="SystemWindow.h" />
+    <ClInclude Include="System_Base.h" />
+    <ClInclude Include="System_Transform.h" />
     <ClInclude Include="TextLine.h" />
+    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="thirdParty\TinyXML\tinyxml2.h" />
     <ClInclude Include="TraversableStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseState.cpp" />
     <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Component_Animator.cpp" />
+    <ClCompile Include="Component_Base.cpp" />
+    <ClCompile Include="Component_Transform.cpp" />
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="DebugOverlay.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="GUIStyle.cpp" />
     <ClCompile Include="Gui_Controller.cpp" />
@@ -162,9 +175,14 @@
     <ClCompile Include="GUI_Label.cpp" />
     <ClCompile Include="MessageHandler.cpp" />
     <ClCompile Include="SharedContext.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
+    <ClCompile Include="SpriteSheet.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="SystemWindow.cpp" />
+    <ClCompile Include="System_Base.cpp" />
+    <ClCompile Include="System_Transform.cpp" />
     <ClCompile Include="TextLine.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="thirdParty\TinyXML\tinyxml2.cpp" />
     <ClCompile Include="TraversableStack.cpp" />
   </ItemGroup>
