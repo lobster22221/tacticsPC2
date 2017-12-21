@@ -33,7 +33,9 @@ void IntroState::Draw()
 	write->Draw(window);
 	this->guiController->Draw(window);
 
-	window->draw(this->context->GetSprites()->GeSprite("assassin")->Sprite);
+
+	this->context->GetAnimations()->animations["assassin_walk"].Draw(window, this->context->GetSprites());
+
 
 }
 

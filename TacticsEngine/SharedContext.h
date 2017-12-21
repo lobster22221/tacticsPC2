@@ -6,6 +6,7 @@
 #include "MessageHandler.h"
 #include "TextureManager.h"
 #include "SpriteManager.h"
+#include "AnimationManager.h"
 using namespace std;
 namespace System
 {
@@ -26,6 +27,7 @@ namespace System
 		Render::FontManager *GetFontManager();
 		TextureManager * GetTextures();
 		SpriteManager * GetSprites();
+		AnimationManager * GetAnimations();
 		System::MessageHandler * GetMessenger() { return MessageManager; }
 
 		//set to true to exit
@@ -42,7 +44,7 @@ namespace System
 		//ResourceLoaders
 		TextureManager * Textures;
 		SpriteManager * Sprites;
-
+		AnimationManager * Animations;
 	};
 }
 

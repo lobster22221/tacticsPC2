@@ -124,7 +124,12 @@
     <ClInclude Include="SpriteSheet.h">
       <Filter>Source Files\System\Render Systems</Filter>
     </ClInclude>
-    <ClInclude Include="Frame.h" />
+    <ClInclude Include="Frame.h">
+      <Filter>Source Files\System\Render Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationManager.h">
+      <Filter>Source Files\Resources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseState.cpp">
@@ -206,7 +211,10 @@
       <Filter>Source Files\System\Render Systems</Filter>
     </ClCompile>
     <ClCompile Include="Frame.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\System\Render Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationManager.cpp">
+      <Filter>Source Files\Resources</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

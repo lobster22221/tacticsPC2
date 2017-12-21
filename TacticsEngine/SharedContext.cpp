@@ -47,9 +47,12 @@ namespace System
 		string TexFile = this->FileSources["TextureSource"];
 		this->Textures = new TextureManager();
 		Textures->LoadTextures(TexFile);
-		Sprites = new SpriteManager(Textures);
-	
+
+		Sprites = new SpriteManager(Textures);	
 		Sprites->LoadSprites(FileSources["SpriteSource"]);
+		
+		Animations = new AnimationManager();
+		Animations->LoadAnimations(FileSources["AnimationSource"]);
 	}
 
 	SystemWindow * SharedContext::GetWindow()
@@ -70,6 +73,11 @@ namespace System
 	SpriteManager * SharedContext::GetSprites()
 	{
 		return Sprites;
+	}
+
+	AnimationManager * SharedContext::GetAnimations()
+	{
+		return Animations;
 	}
 
 

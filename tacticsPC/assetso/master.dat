@@ -1,6 +1,0 @@
-WindowDefinition assets/Window.dat
-TextureSource assets/Textures.dat
-SpriteSource assets/Sprites.dat
-AudioSource assets/Audio.dat
-InputSource assets/Input.dat
-FontSource	assets/Font.dat

@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="BaseState.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="Component_Animator.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="TraversableStack.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="BaseState.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Component_Animator.cpp" />
