@@ -1,0 +1,5 @@
+/index | caption | Message | 0 = warning 1 = error
+1 |Unable to create window | Window could not be created | 4
+2 |Unable to Load File | Unable to load File | 4
+3 |Cannot read file | This file is formatted incorrectly, and could not be read | 4
+4 |Array out of bounds | Could not access element | 4

@@ -2,20 +2,22 @@
 #include <string>
 #include <SFML\Graphics.hpp>
 #include <map>
+#include "SpriteSheet.h"
+#include "TextureManager.h"
 using namespace std;
 class SpriteManager
 {
 public:
-	SpriteManager();
+	SpriteManager(TextureManager * tm);
 	~SpriteManager();
 
-	void LoadSprite(string indexFile);
-
+	
 	void LoadSprites(string filename);
-	sf::Sprite * GeSprite(string key);
+	SpriteSheet * GeSprite(string key);
 
 
 private:
-	map<string, sf::Texture *> textures;
+	map<string, SpriteSheet *> sprites;
+	TextureManager * texturesRef;
 };
 

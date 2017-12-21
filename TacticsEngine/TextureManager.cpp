@@ -35,6 +35,7 @@ void TextureManager::LoadTextures(string indexFile)
 			string key;
 			string filename;
 			tmp >> key >> filename;
+			
 			sf::Texture * tex = new sf::Texture();
 			tex->loadFromFile(filename);
 			this->textures[key] = tex;
@@ -47,11 +48,8 @@ void TextureManager::LoadTextures(string indexFile)
 	}
 }
 
-void TextureManager::LoadTexture(string filename)
-{
-}
 
 sf::Texture * TextureManager::GetTexture(string key)
 {
-	return nullptr;
+	return textures[key];
 }

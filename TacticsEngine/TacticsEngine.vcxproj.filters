@@ -122,8 +122,9 @@
       <Filter>Source Files\Resources</Filter>
     </ClInclude>
     <ClInclude Include="SpriteSheet.h">
-      <Filter>Source Files\Resources</Filter>
+      <Filter>Source Files\System\Render Systems</Filter>
     </ClInclude>
+    <ClInclude Include="Frame.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseState.cpp">
@@ -202,7 +203,10 @@
       <Filter>Source Files\Resources</Filter>
     </ClCompile>
     <ClCompile Include="SpriteSheet.cpp">
-      <Filter>Source Files\Resources</Filter>
+      <Filter>Source Files\System\Render Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Frame.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

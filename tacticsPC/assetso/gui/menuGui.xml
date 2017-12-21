@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui>
+  <mainmenu type="menu" id="mainmenu">
+    <Element type="Button" id="newGame">
+      <size width="400" height="100"></size>
+      <position x="200" y="300"></position>
+      <color red ="255" green="0" blue="0" alpha="255"></color>
+      <label>
+        <color red ="255" green="255" blue="255" alpha="255"></color>
+        <text>New Game</text>
+      </label>
+    </Element>
+    <Element type="Button" id="Exit">
+      <size width="400" height="100"></size>
+      <position x="200" y="425"></position>
+      <color red ="255" green="0" blue="0" alpha="255"></color>
+      <label>
+        <color red ="255" green="255" blue="255" alpha="255"></color>
+        <text>Exit</text>
+      </label>
+      <event type ="OnClick">
+        <message id="2">          
+        </message>
+      </event>
+    </Element>
+  </mainmenu>
+</gui>

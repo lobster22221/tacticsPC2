@@ -11,8 +11,6 @@ public:
 	~TextureManager();
 
 	void LoadTextures(string indexFile);
-
-	void LoadTexture(string filename);
 	sf::Texture * GetTexture(string key);
 
 

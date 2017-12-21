@@ -21,6 +21,8 @@ namespace System
 		LoadMasterFile(masterFile);
 		CreateSystemWindow();
 		CreateFontManager();
+		CreateGraphics();
+
 		this->MessageManager = new System::MessageHandler(Window);
 		
 	}
@@ -29,7 +31,6 @@ namespace System
 	{
 		string WindowFile = this->FileSources["WindowDefinition"];
 		this->Window = new SystemWindow(WindowFile);
-		
 		Window->Create();
 	}
 
@@ -41,6 +42,16 @@ namespace System
 		fontManager->Initiate(FontFile);
 	}
 
+	void SharedContext::CreateGraphics()
+	{
+		string TexFile = this->FileSources["TextureSource"];
+		this->Textures = new TextureManager();
+		Textures->LoadTextures(TexFile);
+		Sprites = new SpriteManager(Textures);
+	
+		Sprites->LoadSprites(FileSources["SpriteSource"]);
+	}
+
 	SystemWindow * SharedContext::GetWindow()
 	{
 		return Window;
@@ -49,6 +60,16 @@ namespace System
 	Render::FontManager * SharedContext::GetFontManager()
 	{
 		return fontManager;
+	}
+
+	TextureManager * SharedContext::GetTextures()
+	{
+		return Textures;
+	}
+
+	SpriteManager * SharedContext::GetSprites()
+	{
+		return Sprites;
 	}
 
 

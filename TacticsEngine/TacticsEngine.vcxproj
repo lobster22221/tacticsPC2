@@ -140,6 +140,7 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="FontManager.h" />
+    <ClInclude Include="Frame.h" />
     <ClInclude Include="GUIStyle.h" />
     <ClInclude Include="Gui_Controller.h" />
     <ClInclude Include="GUI_Element.h" />
@@ -169,6 +170,7 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="Frame.cpp" />
     <ClCompile Include="GUIStyle.cpp" />
     <ClCompile Include="Gui_Controller.cpp" />
     <ClCompile Include="GUI_Element.cpp" />
