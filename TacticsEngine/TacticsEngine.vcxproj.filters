@@ -41,6 +41,15 @@
     <Filter Include="Source Files\Resources">
       <UniqueIdentifier>{4c9e085e-e684-4f03-aadf-1c16e1468ac0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\WorldCreationTools">
+      <UniqueIdentifier>{5f5563d2-719e-46ee-b49e-80101a6f43b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ThirdParty\pathFinder">
+      <UniqueIdentifier>{eb5e38fa-143f-4adc-9295-b2d3107aef1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ThirdParty\tinyxml">
+      <UniqueIdentifier>{b0ba3553-6512-4eb4-bd1b-da223779e3f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InputCommands.h">
@@ -94,9 +103,6 @@
     <ClInclude Include="TraversableStack.h">
       <Filter>Source Files\utility</Filter>
     </ClInclude>
-    <ClInclude Include="thirdParty\TinyXML\tinyxml2.h">
-      <Filter>Source Files\ThirdParty</Filter>
-    </ClInclude>
     <ClInclude Include="EntityManager.h">
       <Filter>Source Files\System\ECS</Filter>
     </ClInclude>
@@ -129,6 +135,33 @@
     </ClInclude>
     <ClInclude Include="AnimationManager.h">
       <Filter>Source Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMap.h">
+      <Filter>Source Files\WorldCreationTools</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdParty\PathFinder\AStar.h">
+      <Filter>Source Files\ThirdParty\pathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdParty\PathFinder\Dijkstra.h">
+      <Filter>Source Files\ThirdParty\pathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdParty\PathFinder\Node.h">
+      <Filter>Source Files\ThirdParty\pathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdParty\PathFinder\PathAlgorithm.h">
+      <Filter>Source Files\ThirdParty\pathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdParty\PathFinder\PathFinder.h">
+      <Filter>Source Files\ThirdParty\pathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdParty\TinyXML\tinyxml2.h">
+      <Filter>Source Files\ThirdParty\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Source Files\WorldCreationTools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Source Files\WorldCreationTools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -180,9 +213,6 @@
     <ClCompile Include="TraversableStack.cpp">
       <Filter>Source Files\utility</Filter>
     </ClCompile>
-    <ClCompile Include="thirdParty\TinyXML\tinyxml2.cpp">
-      <Filter>Source Files\ThirdParty</Filter>
-    </ClCompile>
     <ClCompile Include="EntityManager.cpp">
       <Filter>Source Files\System\ECS</Filter>
     </ClCompile>
@@ -215,6 +245,27 @@
     </ClCompile>
     <ClCompile Include="AnimationManager.cpp">
       <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>Source Files\WorldCreationTools</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdParty\PathFinder\Dijkstra.cpp">
+      <Filter>Source Files\ThirdParty\pathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdParty\PathFinder\Node.cpp">
+      <Filter>Source Files\ThirdParty\pathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdParty\PathFinder\AStar.cpp">
+      <Filter>Source Files\ThirdParty\pathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdParty\TinyXML\tinyxml2.cpp">
+      <Filter>Source Files\ThirdParty\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files\WorldCreationTools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Source Files\WorldCreationTools</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

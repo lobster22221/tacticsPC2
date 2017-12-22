@@ -142,6 +142,7 @@
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="FontManager.h" />
     <ClInclude Include="Frame.h" />
+    <ClInclude Include="Grid.h" />
     <ClInclude Include="GUIStyle.h" />
     <ClInclude Include="Gui_Controller.h" />
     <ClInclude Include="GUI_Element.h" />
@@ -157,7 +158,14 @@
     <ClInclude Include="System_Transform.h" />
     <ClInclude Include="TextLine.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="thirdParty\PathFinder\AStar.h" />
+    <ClInclude Include="thirdParty\PathFinder\Dijkstra.h" />
+    <ClInclude Include="thirdParty\PathFinder\Node.h" />
+    <ClInclude Include="thirdParty\PathFinder\PathAlgorithm.h" />
+    <ClInclude Include="thirdParty\PathFinder\PathFinder.h" />
     <ClInclude Include="thirdParty\TinyXML\tinyxml2.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="TileMap.h" />
     <ClInclude Include="TraversableStack.h" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +181,7 @@
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="Grid.cpp" />
     <ClCompile Include="GUIStyle.cpp" />
     <ClCompile Include="Gui_Controller.cpp" />
     <ClCompile Include="GUI_Element.cpp" />
@@ -187,7 +196,12 @@
     <ClCompile Include="System_Transform.cpp" />
     <ClCompile Include="TextLine.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="thirdParty\PathFinder\AStar.cpp" />
+    <ClCompile Include="thirdParty\PathFinder\Dijkstra.cpp" />
+    <ClCompile Include="thirdParty\PathFinder\Node.cpp" />
     <ClCompile Include="thirdParty\TinyXML\tinyxml2.cpp" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="TileMap.cpp" />
     <ClCompile Include="TraversableStack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

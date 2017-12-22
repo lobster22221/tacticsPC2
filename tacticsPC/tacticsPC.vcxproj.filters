@@ -8,6 +8,9 @@
     <Filter Include="Source Files\State">
       <UniqueIdentifier>{3d3d5a2e-3651-4e0e-b6fc-c78b79386897}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\State\Debug">
+      <UniqueIdentifier>{28ce82f8-de01-4ee9-8c97-211433bb5952}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -16,10 +19,16 @@
     <ClCompile Include="IntroState.cpp">
       <Filter>Source Files\State</Filter>
     </ClCompile>
+    <ClCompile Include="TileMapDebugState.cpp">
+      <Filter>Source Files\State\Debug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntroState.h">
       <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMapDebugState.h">
+      <Filter>Source Files\State\Debug</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
