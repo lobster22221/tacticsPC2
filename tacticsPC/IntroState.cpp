@@ -7,6 +7,7 @@ IntroState::~IntroState()
 
 void IntroState::Initiate()
 {
+	cout << "loaded";
 	guiController->LoadGUI("assets/gui/menuGUI.xml");
 
 

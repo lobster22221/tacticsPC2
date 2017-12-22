@@ -77,10 +77,9 @@ void GUI::Gui_Controller::HandleMessages()
 				{
 					if (el.second->WasClicked(mX, mY))
 					{
-						cout << "clicked " << el.second->guiID << endl;
-						EventMessage Message;
-						Message.EventType = GameEvent::WINDOW_CLOSED;
-						context->GetMessenger()->Dispatch(Message);
+
+						cout << "clicked " << el.second->guiID << endl;						
+						context->GetMessenger()->Dispatch(el.second->OnClickMessage);
 					}
 				}
 
@@ -216,10 +215,9 @@ void GUI::Gui_Controller::LoadElement(tinyxml2::XMLElement * n)
 		{
 			//What kind of action triggers this event
 			const char * action = children->Attribute("type");
-			s = t;
+			s = action;
 			//What message to dispatch
-			const char * messageType = children->FirstChildElement()->Attribute("id");
-			element->OnClickMessage.EventType = (GameEvent)stoi(messageType);
+			element->LoadMessage(children->FirstChildElement());
 			element->Clickable = true;
 		}
 		

@@ -1,6 +1,8 @@
 #include "Grid.h"
 #include "thirdParty\PathFinder\PathFinder.h"
 #include "thirdParty/PathFinder/Dijkstra.h"
+#include <iostream>
+using	namespace std;
 Grid::Grid(int w, int h)
 {
 	width = w;
@@ -25,6 +27,16 @@ Tile * Grid::GetNode(int index)
 
 void Grid::Print()
 {
+	cout << "Map: " << endl;
+	for (int i = 0; i < width; i++)
+	{
+		for (int j = 0; j < height; j++)
+		{
+			int c = nodes[getIndex(i, j)]->tileSpriteID;
+			cout << c << " ";
+		}
+		cout << endl;
+	}
 }
 
 bool Grid::FindPath(int startX, int startY, int endX, int endY, vector<Tile*> path)

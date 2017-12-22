@@ -2,7 +2,7 @@
 
 
 
-TileMapDebugState::TileMapDebugState()
+TileMapDebugState::TileMapDebugState(System::SharedContext * context, System::StateManager * stateManager):BaseState(context, stateManager)
 {
 }
 

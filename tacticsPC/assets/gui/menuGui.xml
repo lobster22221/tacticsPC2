@@ -19,7 +19,8 @@
         <text>Exit</text>
       </label>
       <event type ="OnClick">
-        <message id="2">          
+        <message id="4">
+			<StateToLoad>1</StateToLoad>
         </message>
       </event>
     </Element>

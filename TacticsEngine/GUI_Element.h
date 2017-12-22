@@ -3,6 +3,7 @@
 #include <string>
 #include "TextLine.h"
 #include "Command.h"
+#include "thirdParty\TinyXML\tinyxml2.h"
 using namespace std;
 namespace GUI
 {
@@ -56,6 +57,8 @@ namespace GUI
 
 		bool Clickable;
 		EventMessage OnClickMessage;
+
+		void LoadMessage(tinyxml2::XMLElement * messageNode);
 		
 	};
 

@@ -5,7 +5,8 @@ enum GameEvent
 	NONE,
 	EVENT_DEBUG,
 	WINDOW_CLOSED,
-	EVENT_CLICK_LEFT
+	EVENT_CLICK_LEFT,
+	EVENT_LOAD_STATE
 };
 
 struct EventMessage
@@ -26,6 +27,12 @@ struct KeyboardEvent
 {
 	char keyPressed;
 	
+};
+
+struct LoadStateEvent
+{
+	int state;
+
 };
 
 enum CommandType

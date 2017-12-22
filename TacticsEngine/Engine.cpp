@@ -27,6 +27,7 @@ namespace System
 		auto messenger = context->GetMessenger();
 		messenger->Subscribe((int)GameEvent::EVENT_DEBUG, this);
 		messenger->Subscribe((int)GameEvent::WINDOW_CLOSED, this);
+		messenger->Subscribe((int)GameEvent::EVENT_LOAD_STATE, this);
 		LoadState(0);
 	}
 
@@ -87,6 +88,13 @@ namespace System
 
 					break;
 				}
+				case GameEvent::EVENT_LOAD_STATE:
+				{
+					LoadStateEvent *ev = (LoadStateEvent*)message.EventData;
+					this->LoadState(ev->state);
+					break;
+				}
+
 				case GameEvent::WINDOW_CLOSED:
 				{
 					exit(0);

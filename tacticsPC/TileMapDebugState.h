@@ -1,9 +1,14 @@
 #pragma once
 #include <TacticsEngine\Grid.h>
-class TileMapDebugState
+#include <TacticsEngine\FontManager.h>
+#include <TacticsEngine\Gui_Controller.h>
+
+#include <TacticsEngine/BaseState.h>
+class TileMapDebugState:
+	public BaseState
 {
 public:
-	TileMapDebugState();
+	TileMapDebugState(System::SharedContext * context, System::StateManager * stateManager);
 	~TileMapDebugState();
 
 	void Initiate();
