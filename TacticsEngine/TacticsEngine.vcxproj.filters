@@ -163,7 +163,9 @@
     <ClInclude Include="Tile.h">
       <Filter>Source Files\WorldCreationTools</Filter>
     </ClInclude>
-    <ClInclude Include="TileSet.h" />
+    <ClInclude Include="TileSet.h">
+      <Filter>Source Files\WorldCreationTools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseState.cpp">
@@ -269,7 +271,7 @@
       <Filter>Source Files\WorldCreationTools</Filter>
     </ClCompile>
     <ClCompile Include="TileSet.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\WorldCreationTools</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

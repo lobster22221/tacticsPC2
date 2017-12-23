@@ -13,8 +13,7 @@ TileMapDebugState::~TileMapDebugState()
 
 void TileMapDebugState::Initiate()
 {
-	grid = new Grid(32, 32);
-	grid->Print();
+	this->tilemap = new TileMap(32, 32, "tileset", context->GetSprites(), context->GetWindow()->GetWindow());
 }
 
 void TileMapDebugState::Tick()
@@ -31,6 +30,7 @@ void TileMapDebugState::Animate()
 
 void TileMapDebugState::Draw()
 {
+	tilemap->Draw();
 }
 
 void TileMapDebugState::HandleMessages()

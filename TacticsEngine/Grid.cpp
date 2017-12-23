@@ -2,12 +2,49 @@
 #include "thirdParty\PathFinder\PathFinder.h"
 #include "thirdParty/PathFinder/Dijkstra.h"
 #include <iostream>
+#include <fstream>
+#include "Debug.h"
 using	namespace std;
 Grid::Grid(int w, int h)
 {
 	width = w;
 	height = h;
 	CreateFlat();
+}
+
+Grid::Grid(string file)
+{
+	Load(file);
+	Print();
+}
+
+void Grid::Load(string file)
+{
+	std::ifstream fileStream;
+	fileStream.open(file);
+	if (fileStream.is_open())
+	{
+		Debug::Log(file + " Loaded\n");
+		string line;
+		getline(fileStream, line);
+		stringstream sl(line);		
+		sl >> tileSetName >> width >> height;
+		this->CreateFlat();
+		for (int y = 0; y < height; y++)
+		{
+			getline(fileStream, line);
+			stringstream tmp(line);
+			for (int x = 0; x < width; x++)
+			{
+				int t;
+				string tstr;
+				tmp >> tstr;
+				t = stoi(tstr);
+				this->GetNode(x, y)->tileSpriteID = t;
+			}
+		}
+
+	}
 }
 
 Tile * Grid::GetNode(int x, int y)
@@ -28,11 +65,11 @@ Tile * Grid::GetNode(int index)
 void Grid::Print()
 {
 	cout << "Map: " << endl;
-	for (int i = 0; i < width; i++)
+	for (int y = 0; y < height; y++)
 	{
-		for (int j = 0; j < height; j++)
+		for (int x = 0; x < width; x++)
 		{
-			int c = nodes[getIndex(i, j)]->tileSpriteID;
+			int c = nodes[getIndex(x, y)]->tileSpriteID;
 			cout << c << " ";
 		}
 		cout << endl;
@@ -76,7 +113,7 @@ vector<Tile*> Grid::FindRadius(int sx, int sy, int radius)
 
 int Grid::getIndex(int x, int y)
 {
-	return width * y + x;
+	return height * x + y;
 }
 
 void Grid::CreateFlat()

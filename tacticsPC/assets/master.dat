@@ -5,3 +5,4 @@ AnimationSource assets/animations.dat
 AudioSource assets/Audio.dat
 InputSource assets/Input.dat
 FontSource	assets/Font.dat
+testmap		assets/maps/test1.map

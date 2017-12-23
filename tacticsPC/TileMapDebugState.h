@@ -1,8 +1,7 @@
 #pragma once
-#include <TacticsEngine\Grid.h>
+#include <TacticsEngine/TileMap.h>
 #include <TacticsEngine\FontManager.h>
 #include <TacticsEngine\Gui_Controller.h>
-
 #include <TacticsEngine/BaseState.h>
 class TileMapDebugState:
 	public BaseState
@@ -32,6 +31,6 @@ public:
 	void Destroy();
 
 private:
-	Grid * grid;
+	TileMap * tilemap;
 };
 
