@@ -1,0 +1,17 @@
+<Items>
+	<Item id="testSword">
+		<name>p-Sword</name>
+		<description>
+			A blade so powerful that it can cut the 4th wall.
+		</description>
+		<Slots>
+			<Slot id="Weapon">1</Slot>
+			<Slot id="Hand">1</Slot>1</Slot>
+		</Slots>
+		
+		<classification id="broadsword">
+		</classification>
+	</Item>
+	
+	
+</Items>

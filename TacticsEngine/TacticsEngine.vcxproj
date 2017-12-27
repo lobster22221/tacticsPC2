@@ -136,6 +136,7 @@
     <ClInclude Include="Component_Animator.h" />
     <ClInclude Include="Component_Base.h" />
     <ClInclude Include="Component_Transform.h" />
+    <ClInclude Include="DataManager.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="DebugOverlay.h" />
     <ClInclude Include="Engine.h" />
@@ -148,7 +149,13 @@
     <ClInclude Include="GUI_Element.h" />
     <ClInclude Include="GUI_Label.h" />
     <ClInclude Include="InputCommands.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemManager.h" />
+    <ClInclude Include="Mechanic.h" />
     <ClInclude Include="MessageHandler.h" />
+    <ClInclude Include="PlayerContext.h" />
+    <ClInclude Include="PlayerParty.h" />
     <ClInclude Include="SharedContext.h" />
     <ClInclude Include="SpriteManager.h" />
     <ClInclude Include="SpriteSheet.h" />
@@ -168,6 +175,8 @@
     <ClInclude Include="TileMap.h" />
     <ClInclude Include="TileSet.h" />
     <ClInclude Include="TraversableStack.h" />
+    <ClInclude Include="Unit.h" />
+    <ClInclude Include="Unit_Equipment.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimationManager.cpp" />
@@ -176,6 +185,7 @@
     <ClCompile Include="Component_Animator.cpp" />
     <ClCompile Include="Component_Base.cpp" />
     <ClCompile Include="Component_Transform.cpp" />
+    <ClCompile Include="DataManager.cpp" />
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="DebugOverlay.cpp" />
     <ClCompile Include="Engine.cpp" />
@@ -187,7 +197,13 @@
     <ClCompile Include="Gui_Controller.cpp" />
     <ClCompile Include="GUI_Element.cpp" />
     <ClCompile Include="GUI_Label.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemManager.cpp" />
+    <ClCompile Include="Mechanic.cpp" />
     <ClCompile Include="MessageHandler.cpp" />
+    <ClCompile Include="PlayerContext.cpp" />
+    <ClCompile Include="PlayerParty.cpp" />
     <ClCompile Include="SharedContext.cpp" />
     <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="SpriteSheet.cpp" />
@@ -205,6 +221,8 @@
     <ClCompile Include="TileMap.cpp" />
     <ClCompile Include="TileSet.cpp" />
     <ClCompile Include="TraversableStack.cpp" />
+    <ClCompile Include="Unit.cpp" />
+    <ClCompile Include="Unit_Equipment.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

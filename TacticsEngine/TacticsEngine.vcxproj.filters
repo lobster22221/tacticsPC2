@@ -50,6 +50,18 @@
     <Filter Include="Source Files\ThirdParty\tinyxml">
       <UniqueIdentifier>{b0ba3553-6512-4eb4-bd1b-da223779e3f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{996bb030-6183-4876-a8b2-14181d33c3b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\item">
+      <UniqueIdentifier>{952331f3-d3d4-45e2-918c-e1f95dd10764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\Spell">
+      <UniqueIdentifier>{c6861cb0-8811-4dfe-87b2-1ceba10af51a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\Manage">
+      <UniqueIdentifier>{5596e615-238c-4595-bda0-f73e9d342251}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InputCommands.h">
@@ -166,6 +178,31 @@
     <ClInclude Include="TileSet.h">
       <Filter>Source Files\WorldCreationTools</Filter>
     </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerContext.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerParty.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit_Equipment.h">
+      <Filter>Source Files\Data\item</Filter>
+    </ClInclude>
+    <ClInclude Include="Mechanic.h">
+      <Filter>Source Files\Data\Spell</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Source Files\Data\item</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseState.cpp">
@@ -272,6 +309,33 @@
     </ClCompile>
     <ClCompile Include="TileSet.cpp">
       <Filter>Source Files\WorldCreationTools</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerContext.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerParty.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit_Equipment.cpp">
+      <Filter>Source Files\Data\item</Filter>
+    </ClCompile>
+    <ClCompile Include="Mechanic.cpp">
+      <Filter>Source Files\Data\Spell</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\Data\item</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemManager.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
