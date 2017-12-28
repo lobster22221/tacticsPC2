@@ -62,6 +62,9 @@
     <Filter Include="Source Files\Data\Manage">
       <UniqueIdentifier>{5596e615-238c-4595-bda0-f73e9d342251}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Data\containers">
+      <UniqueIdentifier>{db88d958-f28b-4e17-b839-9e960d110a9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InputCommands.h">
@@ -181,15 +184,6 @@
     <ClInclude Include="Unit.h">
       <Filter>Source Files\Data</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerContext.h">
-      <Filter>Source Files\Data</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerParty.h">
-      <Filter>Source Files\Data</Filter>
-    </ClInclude>
-    <ClInclude Include="Inventory.h">
-      <Filter>Source Files\Data</Filter>
-    </ClInclude>
     <ClInclude Include="Unit_Equipment.h">
       <Filter>Source Files\Data\item</Filter>
     </ClInclude>
@@ -199,10 +193,30 @@
     <ClInclude Include="Item.h">
       <Filter>Source Files\Data\item</Filter>
     </ClInclude>
-    <ClInclude Include="DataManager.h">
-      <Filter>Source Files\Data</Filter>
+    <ClInclude Include="ItemManager.h">
+      <Filter>Source Files\Data\Manage</Filter>
     </ClInclude>
-    <ClInclude Include="ItemManager.h" />
+    <ClInclude Include="DataManager.h">
+      <Filter>Source Files\Data\Manage</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerContext.h">
+      <Filter>Source Files\Data\Manage</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Source Files\Data\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerParty.h">
+      <Filter>Source Files\Data\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="SpellEffect.h">
+      <Filter>Source Files\Data\Spell</Filter>
+    </ClInclude>
+    <ClInclude Include="Mechanic enum.h">
+      <Filter>Source Files\Data\Spell</Filter>
+    </ClInclude>
+    <ClInclude Include="Spell.h">
+      <Filter>Source Files\Data\Spell</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseState.cpp">
@@ -310,18 +324,6 @@
     <ClCompile Include="TileSet.cpp">
       <Filter>Source Files\WorldCreationTools</Filter>
     </ClCompile>
-    <ClCompile Include="Unit.cpp">
-      <Filter>Source Files\Data</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerContext.cpp">
-      <Filter>Source Files\Data</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerParty.cpp">
-      <Filter>Source Files\Data</Filter>
-    </ClCompile>
-    <ClCompile Include="Inventory.cpp">
-      <Filter>Source Files\Data</Filter>
-    </ClCompile>
     <ClCompile Include="Unit_Equipment.cpp">
       <Filter>Source Files\Data\item</Filter>
     </ClCompile>
@@ -331,11 +333,29 @@
     <ClCompile Include="Item.cpp">
       <Filter>Source Files\Data\item</Filter>
     </ClCompile>
+    <ClCompile Include="ItemManager.cpp">
+      <Filter>Source Files\Data\Manage</Filter>
+    </ClCompile>
     <ClCompile Include="DataManager.cpp">
+      <Filter>Source Files\Data\Manage</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerContext.cpp">
+      <Filter>Source Files\Data\Manage</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source Files\Data\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerParty.cpp">
+      <Filter>Source Files\Data\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="SpellEffect.cpp">
+      <Filter>Source Files\Data\Spell</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit.cpp">
       <Filter>Source Files\Data</Filter>
     </ClCompile>
-    <ClCompile Include="ItemManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Spell.cpp">
+      <Filter>Source Files\Data\Spell</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

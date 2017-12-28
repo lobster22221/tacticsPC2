@@ -152,11 +152,14 @@
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemManager.h" />
+    <ClInclude Include="Mechanic enum.h" />
     <ClInclude Include="Mechanic.h" />
     <ClInclude Include="MessageHandler.h" />
     <ClInclude Include="PlayerContext.h" />
     <ClInclude Include="PlayerParty.h" />
     <ClInclude Include="SharedContext.h" />
+    <ClInclude Include="Spell.h" />
+    <ClInclude Include="SpellEffect.h" />
     <ClInclude Include="SpriteManager.h" />
     <ClInclude Include="SpriteSheet.h" />
     <ClInclude Include="StateManager.h" />
@@ -205,6 +208,8 @@
     <ClCompile Include="PlayerContext.cpp" />
     <ClCompile Include="PlayerParty.cpp" />
     <ClCompile Include="SharedContext.cpp" />
+    <ClCompile Include="Spell.cpp" />
+    <ClCompile Include="SpellEffect.cpp" />
     <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="SpriteSheet.cpp" />
     <ClCompile Include="StateManager.cpp" />

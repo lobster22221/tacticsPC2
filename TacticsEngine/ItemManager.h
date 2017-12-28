@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
-#include "Item.h"
+#include <vector>
 #include "thirdParty\TinyXML\tinyxml2.h"
+class Item;
 using namespace std;
 class ItemManager
 {
@@ -10,8 +11,8 @@ public:
 	~ItemManager();
 
 	void LoadItems(string file);
-	void LoadItem(tinyxml2::XMLElement* itemNode);
+	Item * LoadItem(tinyxml2::XMLElement* itemNode);
 private:
-	
+	vector<Item *> items;
 };
 

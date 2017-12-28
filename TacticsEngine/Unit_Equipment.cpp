@@ -30,13 +30,13 @@ bool Unit_Equipment::EquipUnit(Item * item, int slots)
 	}
 	//We need to loop through each slot the item uses and check if we have enough availible
 	bool conflict = false;
-	for (int i = 0; i < item->get_slots_used.size(); i++)
+	for (int i = 0; i < item->get_slots_used().size(); i++)
 	{
 		//Which slot is being analyzed
 		string slotToUse = item->get_slots_used()[i];
 
 		//How many slots the item requires
-		int slotsTaken = item->get_slots_count[slotToUse];
+		int slotsTaken = item->get_slots_count(slotToUse);
 
 		//How many slots the unit has availible
 		int slotsAvailible = this->Availible_Slots[slotToUse];
@@ -67,13 +67,13 @@ bool Unit_Equipment::EquipUnit(Item * item, int slots)
 
 	//We have to make sure there are no conflicts in EVERY slot, so subtracting slots for equiping unfortunately
 	//requires another loop
-	for (int i = 0; i < item->get_slots_used.size(); i++)
+	for (int i = 0; i < item->get_slots_used().size(); i++)
 	{
 		//Which slot is being used
 		string slotToUse = item->get_slots_used()[i];
 
 		//How many slots are being used
-		int slotsTaken = item->get_slots_count[slotToUse];
+		int slotsTaken = item->get_slots_count(slotToUse);
 
 		//Remove the slots
 		this->Availible_Slots[slotToUse] -= slotsTaken;

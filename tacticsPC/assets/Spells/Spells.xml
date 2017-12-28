@@ -1,0 +1,17 @@
+<Spells>
+	<Spell>
+		<name>Fireball</name>
+		<description>A ball of fire spews from the caster, hitting a radius around the target</description>
+		<targets>
+			<target>unit</target>
+		</targets>
+		<effects>
+			<effect>
+				<target>unit</target>
+				<Mechanic>Damage</Mechanic>
+				<Element>Fire</Element>
+				<Power>5</Power>
+			</effect>
+		</effects>
+	</Spell>
+</Spells>

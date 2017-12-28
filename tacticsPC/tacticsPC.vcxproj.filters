@@ -22,6 +22,9 @@
     <ClCompile Include="TileMapDebugState.cpp">
       <Filter>Source Files\State\Debug</Filter>
     </ClCompile>
+    <ClCompile Include="ItemLoaderDebugState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntroState.h">
@@ -30,5 +33,6 @@
     <ClInclude Include="TileMapDebugState.h">
       <Filter>Source Files\State\Debug</Filter>
     </ClInclude>
+    <ClInclude Include="ItemLoaderDebugState.h" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,14 @@
 #pragma once
 #include <string>
 using namespace std;
+
+enum UnitOwner
+{
+	Player,
+	Enemy,
+	Neutral
+};
+
 class Unit
 {
 public:
@@ -9,5 +17,6 @@ public:
 
 	string id;
 	bool isUnique;
+	UnitOwner owner;
 };
 
